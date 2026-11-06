@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUPRENYA - Validasi Pasar & HKI</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Mengimpor font Cinzel dari Google Fonts. Untuk Quiche Bold, kita gunakan fallback serif elegan jika file font tidak ada di lokal -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#beranda" class="logo-link">
+                <!-- Logo ditempatkan di pojok kiri atas tanpa teks tambahan -->
+                <img src="1000077546.png" alt="Logo Eduprenya" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#validasi">Validasi 30 Hari</a></li>
+                <li><a href="#hki">Hub HKI</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+            </ul>
+            <button class="btn-login" onclick="openModal('loginModal')">Masuk / Daftar</button>
+        </div>
+    </nav>
+
+    <!-- 1. Beranda -->
+    <header id="beranda" class="hero section-animate">
+        <div class="hero-content">
+            <h1>Wujudkan Ide Bisnismu dari Desa ke Kancah Nasional</h1>
+            <p>EDUPRENYA adalah ekosistem digital yang memadukan validasi pasar 30 hari, perlindungan HKI pengetahuan karuhun, dan inkubasi bisnis. Mari lindungi warisan budaya sambil membangun bisnis inovatif.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="location.href='#validasi'">Mulai Validasi Idenya</button>
+                <button class="btn-secondary" onclick="location.href='#hki'">Cek Kelayakan HKI</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Tentang EDUPRENYA -->
+    <section id="tentang" class="section-animate">
+        <h2>Tentang EDUPRENYA</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Visi & Misi</h3>
+                <p>Mencetak wirausahawan muda desa yang inovatif, mempercepat komersialisasi produk budaya lokal, dan menjaga pengetahuan karuhun sebagai aset bangsa.</p>
+            </div>
+            <div class="about-card">
+                <h3>Target & Mitra</h3>
+                <p>Fokus pada pemuda desa, didukung oleh DJKI, UMKM, Akademisi, Pemerintah Desa, dan Mentor Profesional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Validasi Pasar 30 Hari -->
+    <section id="validasi" class="bg-soft section-animate">
+        <h2>Peta Jalan Validasi Pasar 30 Hari</h2>
+        <p class="subtitle">Ikuti langkah terstruktur untuk memastikan produkmu diterima pasar.</p>
+        <div class="roadmap">
+            <div class="roadmap-step">
+                <div class="step-circle">1-7</div>
+                <h3>Hari 1-7</h3>
+                <p>Identifikasi masalah & target pelanggan potensial.</p>
+                <ul class="checklist">
+                    <li><input type="checkbox"> Selesaikan kanvas masalah</li>
+                    <li><input type="checkbox"> Buat persona pembeli</li>
+                </ul>
+            </div>
+            <div class="roadmap-step">
+                <div class="step-circle">8-14</div>
+                <h3>Hari 8-14</h3>
+                <p>Wawancara & survei pasar lapangan.</p>
+                <ul class="checklist">
+                    <li><input type="checkbox"> Template survei diisi 50 orang</li>
+                </ul>
+            </div>
+            <div class="roadmap-step">
+                <div class="step-circle">15-21</div>
+                <h3>Hari 15-21</h3>
+                <p>Pengembangan MVP (Minimum Viable Product).</p>
+                <ul class="checklist">
+                    <li><input type="checkbox"> Buat prototipe pertama</li>
+                </ul>
+            </div>
+            <div class="roadmap-step">
+                <div class="step-circle">22-30</div>
+                <h3>Hari 22-30</h3>
+                <p>Uji coba penjualan & evaluasi data.</p>
+                <ul class="checklist">
+                    <li><input type="checkbox"> Dapatkan 10 transaksi pertama</li>
+                </ul>
+            </div>
+        </div>
+        <div class="progress-container">
+            <p>Progres Validasi Anda:</p>
+            <div class="progress-bar"><div class="progress-fill" style="width: 25%;">25%</div></div>
+        </div>
+    </section>
+
+    <!-- 4. Hub HKI & 5. Katalog Pengetahuan Karuhun -->
+    <section id="hki" class="section-animate">
+        <div class="split-section">
+            <div class="hki-content">
+                <h2>Pusat Edukasi HKI</h2>
+                <p>Lindungi produk dan inovasi leluhur Anda. Ketahui jenis HKI yang tepat, proses pendaftaran, dan dokumen yang dibutuhkan.</p>
+                <button class="btn-outline">Mulai Asesmen HKI</button>
+            </div>
+            <div class="karuhun-catalog">
+                <h2>Katalog Pengetahuan Karuhun</h2>
+                <div class="catalog-item">
+                    <h4>Batik Motif X</h4>
+                    <p>Status HKI: <span class="badge protected">Terdaftar</span></p>
+                    <p class="small">Potensi: Komoditas Ekspor Desa Y</p>
+                </div>
+                <div class="catalog-item">
+                    <h4>Jamu Tradisional Z</h4>
+                    <p>Status HKI: <span class="badge process">Dalam Proses</span></p>
+                    <p class="small">Potensi: Kesehatan Modern</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Inkubator Bisnis & 7. Dashboard -->
+    <section id="dashboard" class="bg-soft section-animate">
+        <h2>Dashboard & Inkubator Terpadu</h2>
+        <div class="dashboard-grid">
+            <div class="dash-card">
+                <h3>Skor Kesiapan Bisnis</h3>
+                <div class="score-circle">85/100</div>
+                <p>Bisnis Anda siap masuk pasar.</p>
+            </div>
+            <div class="dash-card">
+                <h3>Jadwal Mentoring</h3>
+                <p>Sesi berikutnya: <b>15 Nov 2026, 14:00</b></p>
+                <button class="btn-secondary">Booking Mentor</button>
+            </div>
+            <div class="dash-card">
+                <h3>Modul Belajar</h3>
+                <p>3 Modul Pemasaran Digital belum diselesaikan.</p>
+                <button class="btn-outline">Lanjutkan Belajar</button>
+            </div>
+            <div class="dash-card">
+                <h3>Asisten Bisnis AI</h3>
+                <p>Konsultasikan ide bisnismu kapan saja.</p>
+                <button class="btn-primary" onclick="alert('Fitur AI sedang memuat...')">Chat AI</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Marketplace & 9. Artikel -->
+    <section id="eksplorasi" class="section-animate">
+        <h2>Marketplace & Wawasan</h2>
+        <div class="explore-grid">
+            <div class="explore-col">
+                <h3>Produk Tervalidasi</h3>
+                <div class="product-card">
+                    <h4>Kriya Bambu Lestari</h4>
+                    <p>Oleh: Pemuda Desa Sukamaju</p>
+                    <button class="btn-sm">Kontak Penjual</button>
+                </div>
+            </div>
+            <div class="explore-col">
+                <h3>Artikel & Tips Bisnis</h3>
+                <ul class="article-list">
+                    <li><a href="#">Cara Branding Produk Desa di Era Digital</a></li>
+                    <li><a href="#">Kisah Sukses: Dari Lokal ke Global</a></li>
+                    <li><a href="#">Pentingnya Merek Dagang bagi UMKM</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Kontak & Footer -->
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Hubungi Kami</h3>
+                <p>Punya pertanyaan? Tim kami siap membantu.</p>
+                <p>Email: support@eduprenya.id</p>
+            </div>
+            <div class="footer-form">
+                <input type="text" placeholder="Nama Anda" class="input-field">
+                <input type="email" placeholder="Email Anda" class="input-field">
+                <textarea placeholder="Pesan Konsultasi" class="input-field"></textarea>
+                <button class="btn-primary">Kirim Pesan</button>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 EDUPRENYA. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- Modal Registrasi/Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2 style="font-family: 'Quiche Bold', 'Playfair Display', serif;">Selamat Datang Kembali</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Lanjutkan perjalanan wirausahamu.</p>
+            <input type="email" placeholder="Email" class="input-field">
+            <input type="password" placeholder="Password" class="input-field">
+            <button class="btn-primary" style="width: 100%; margin-bottom: 10px;">Masuk</button>
+            <button class="btn-outline" style="width: 100%; margin-bottom: 10px;">Masuk dengan Google</button>
+            <div class="modal-links">
+                <a href="#">Lupa Password?</a> | <a href="#">Daftar Baru</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
