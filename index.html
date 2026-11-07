@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUPRENYA — Validasi Pasar 30 Hari & Perlindungan HKI Pemuda Desa</title>
+    
+    <!-- Google Fonts: Quiche Bold & Cinzel styling fallback (Playfair Display + Cinzel + Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        soft: {
+                            50: '#FAF9FF',
+                            100: '#F5F3FF',
+                            200: '#EBE7FF',
+                            300: '#DDD6FE',
+                            400: '#A78BFA',
+                            500: '#7C3AED',
+                            600: '#6B46C1',
+                            700: '#5E48AA',
+                            800: '#3B2471',
+                            900: '#241D3B',
+                            950: '#181329'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        quiche: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-quiche-bold {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .font-cinzel-caps {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .hero-pattern {
+            background-color: #F5F3FF;
+            background-image: radial-gradient(#DDD6FE 0.75px, transparent 0.75px), radial-gradient(#DDD6FE 0.75px, #F5F3FF 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+    </style>
+</head>
+<body class="bg-soft-50 text-soft-900 font-sans antialiased selection:bg-soft-300 selection:text-soft-900">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-soft-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo saja di Pojok Kiri (Tanpa Teks Sebelahnya) -->
+            <a href="#" class="flex items-center">
+                <img src="1000077545.png" alt="EDUPRENYA Logo" class="h-12 w-auto object-contain">
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-soft-800">
+                <a href="#tentang" class="hover:text-soft-600 transition-colors">Tentang</a>
+                <a href="#validasi" class="hover:text-soft-600 transition-colors">Validasi 30 Hari</a>
+                <a href="#hki" class="hover:text-soft-600 transition-colors">Kekayaan Intelektual</a>
+                <a href="#katalog" class="hover:text-soft-600 transition-colors">Katalog Budaya</a>
+                <a href="#inkubator" class="hover:text-soft-600 transition-colors">Inkubator</a>
+                <a href="#marketplace" class="hover:text-soft-600 transition-colors">Marketplace</a>
+                <a href="#artikel" class="hover:text-soft-600 transition-colors">Artikel</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center space-x-3">
+                <button onclick="openModal('authModal')" class="text-sm font-semibold text-soft-800 hover:text-soft-600 px-3 py-2">Masuk</button>
+                <a href="#validasi" class="inline-flex items-center justify-center text-sm font-medium text-white bg-soft-900 hover:bg-soft-800 px-5 py-2.5 rounded-full transition-all shadow-sm">
+                    Mulai Validasi <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: BERANDA / HERO -->
+    <section class="relative hero-pattern pt-16 pb-24 overflow-hidden border-b border-soft-200">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            
+            <span class="inline-block px-4 py-1.5 rounded-full bg-white border border-soft-300 text-xs font-cinzel-caps text-soft-700 mb-6 shadow-sm">
+                Pendidikan · Kewirausahaan · Warisan Budaya
+            </span>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-quiche-bold text-soft-950 tracking-tight leading-tight mb-6">
+                Kearifan leluhur, peluang usaha bagi pemuda desa
+            </h1>
+
+            <p class="text-lg text-soft-700 max-w-3xl mx-auto mb-8 leading-relaxed">
+                EDUPRENYA memadukan validasi pasar 30 hari, perlindungan kekayaan intelektual atas pengetahuan leluhur, dan pendampingan bisnis dalam satu ekosistem — agar produk berbasis budaya lokal sampai ke pasar dan tetap terlindungi.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#validasi" class="w-full sm:w-auto px-8 py-3.5 bg-soft-900 text-white font-medium rounded-full hover:bg-soft-800 shadow-md transition-all">
+                    Mulai Validasi Ide
+                </a>
+                <a href="#tentang" class="w-full sm:w-auto px-8 py-3.5 bg-white text-soft-900 font-medium rounded-full border border-soft-300 hover:bg-soft-100 shadow-sm transition-all">
+                    Kenali Program
+                </a>
+            </div>
+
+            <!-- Partner Logos -->
+            <div class="pt-8 border-t border-soft-200/80">
+                <p class="text-xs font-cinzel-caps text-soft-500 mb-4 tracking-widest">Bersama Mitra Ekosistem</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 opacity-75 grayscale hover:grayscale-0 transition-all text-xs font-semibold text-soft-800">
+                    <span>DJKI Kemenkumham</span>
+                    <span>•</span>
+                    <span>Himpunan UMKM Desa</span>
+                    <span>•</span>
+                    <span>Akademisi & Perguruan Tinggi</span>
+                    <span>•</span>
+                    <span>Pemerintah Desa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: TENTANG EDUPRENYA -->
+    <section id="tentang" class="py-20 bg-white border-b border-soft-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-cinzel-caps text-soft-600 font-bold tracking-wider">Tentang EDUPRENYA</span>
+                    <h2 class="text-3xl sm:text-4xl font-quiche-bold text-soft-950 mt-2 mb-6">
+                        Lahir dari satu keyakinan: kearifan lokal adalah aset ekonomi.
+                    </h2>
+                    <p class="text-soft-700 leading-relaxed mb-6">
+                        Banyak produk budaya bernilai tinggi, tetapi berhenti sebelum terbukti ada pembelinya. EDUPRENYA hadir sebagai platform menjembatani pemuda desa untuk meriset pasar secara terukur selama 30 hari dan mendaftarkan Hak Kekayaan Intelektual (HKI) secara sistematis.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+                        <div class="p-4 rounded-xl bg-soft-100 border border-soft-200">
+                            <h4 class="font-bold text-soft-900 mb-1">Target Sasaran</h4>
+                            <p class="text-sm text-soft-700">Pemuda desa usia 17–30 tahun, komunitas pengrajin muda, dan mahasiswa kembali ke desa.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-soft-100 border border-soft-200">
+                            <h4 class="font-bold text-soft-900 mb-1">Dukungan Ekosistem</h4>
+                            <p class="text-sm text-soft-700">Pendampingan langsung praktisi bisnis, akademisi, dan jaringan pemasaran.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-soft-100 p-8 rounded-2xl border border-soft-200 space-y-4">
+                    <h3 class="text-xl font-quiche-bold text-soft-900">Empat Hambatan Utama Yang Kami Selesaikan</h3>
+                    
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-soft-200 flex gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-soft-200 flex items-center justify-center shrink-0 text-soft-700"><i data-lucide="x-circle" class="w-5 h-5"></i></div>
+                        <div>
+                            <h5 class="font-semibold text-soft-900">Ide Berhenti di Kata Rencana</h5>
+                            <p class="text-xs text-soft-600 mt-0.5">Bingung memulai riset dari mana tanpa modal besar.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-soft-200 flex gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-soft-200 flex items-center justify-center shrink-0 text-soft-700"><i data-lucide="shield-alert" class="w-5 h-5"></i></div>
+                        <div>
+                            <h5 class="font-semibold text-soft-900">Karya Diklaim Pihak Lain</h5>
+                            <p class="text-xs text-soft-600 mt-0.5">Kurangnya pemahaman perlindungan hukum & pendaftaran HKI.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-soft-200 flex gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-soft-200 flex items-center justify-center shrink-0 text-soft-700"><i data-lucide="shopping-bag" class="w-5 h-5"></i></div>
+                        <div>
+                            <h5 class="font-semibold text-soft-900">Akses Pasar Masih Mampet</h5>
+                            <p class="text-xs text-soft-600 mt-0.5">Kesulitan menjangkau pembeli di luar area wilayah desa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: VALIDASI PASAR 30 HARI -->
+    <section id="validasi" class="py-20 bg-soft-100 border-b border-soft-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-cinzel-caps text-soft-600 font-bold">Roadmap Terukur</span>
+                <h2 class="text-3xl sm:text-4xl font-quiche-bold text-soft-950 mt-1">30 Hari Dari Ide Menjadi Bukti Pasar</h2>
+                <p class="text-soft-700 mt-2">Roadmap harian yang membuat ide tidak berhenti di wacana. Dilengkapi checklist tugas dan target milestone.</p>
+            </div>
+
+            <!-- Interactive Roadmap Progress Box -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl border border-soft-200 shadow-sm mb-12">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 pb-6 border-b border-soft-200 gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-soft-900">Progres Validasi Kamu</h3>
+                        <p class="text-sm text-soft-600">Selesaikan tugas mingguan untuk meningkatkan kesiapan usaha.</p>
+                    </div>
+                    <div class="text-right">
+                        <span id="progressText" class="text-2xl font-bold text-soft-700">25%</span>
+                        <p class="text-xs text-soft-500">Tahap 1 Terverifikasi</p>
+                    </div>
+                </div>
+                
+                <div class="w-full bg-soft-200 h-3 rounded-full overflow-hidden mb-8">
+                    <div id="progressBar" class="bg-soft-600 h-full w-1/4 transition-all duration-500"></div>
+                </div>
+
+                <!-- 4 Stage Cards -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="p-4 rounded-xl border-2 border-soft-600 bg-soft-50">
+                        <span class="text-xs font-bold text-soft-600 uppercase">Hari 1–7</span>
+                        <h4 class="font-bold text-soft-900 mt-1">Identifikasi Masalah</h4>
+                        <p class="text-xs text-soft-600 mt-1">Pemetaan potensi desa & calon pembeli pertama.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-soft-200 bg-white">
+                        <span class="text-xs font-bold text-soft-400 uppercase">Hari 8–14</span>
+                        <h4 class="font-bold text-soft-900 mt-1">Riset & Wawancara</h4>
+                        <p class="text-xs text-soft-600 mt-1">Wawancara 10 calon pelanggan potensial.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-soft-200 bg-white">
+                        <span class="text-xs font-bold text-soft-400 uppercase">Hari 15–21</span>
+                        <h4 class="font-bold text-soft-900 mt-1">Pengembangan MVP</h4>
+                        <p class="text-xs text-soft-600 mt-1">Membuat contoh produk awal yang siap diuji.</p>
+                    </div>
+                    <div class="p-4 rounded-xl border border-soft-200 bg-white">
+                        <span class="text-xs font-bold text-soft-400 uppercase">Hari 22–30</span>
+                        <h4 class="font-bold text-soft-900 mt-1">Uji Penjualan</h4>
+                        <p class="text-xs text-soft-600 mt-1">Uji transaksi nyata dan evaluasi respon pasar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: HKI HUB -->
+    <section id="hki" class="py-20 bg-white border-b border-soft-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-cinzel-caps text-soft-600 font-bold">Perlindungan Hukum</span>
+                <h2 class="text-3xl sm:text-4xl font-quiche-bold text-soft-950 mt-1">Pengetahuan Leluhur Layak Dilindungi</h2>
+                <p class="text-soft-700 mt-2">Pahami jenis Kekayaan Intelektual yang tepat untuk produk warisan budaya lokal Anda.</p>
+            </div>
+
+            <!-- Grid IP Types -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="p-6 rounded-2xl bg-soft-50 border border-soft-200">
+                    <div class="w-10 h-10 rounded-lg bg-soft-200 flex items-center justify-center text-soft-700 mb-4"><i data-lucide="bookmark" class="w-5 h-5"></i></div>
+                    <h3 class="font-bold text-lg text-soft-900 mb-2">Merek Dagang</h3>
+                    <p class="text-sm text-soft-700">Melindungi nama usaha, logo, dan identitas visual produk olahan budaya desa agar tidak ditiru.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-soft-50 border border-soft-200">
+                    <div class="w-10 h-10 rounded-lg bg-soft-200 flex items-center justify-center text-soft-700 mb-4"><i data-lucide="globe" class="w-5 h-5"></i></div>
+                    <h3 class="font-bold text-lg text-soft-900 mb-2">Indikasi Geografis</h3>
+                    <p class="text-sm text-soft-700">Melindungi kekhasan produk komoditas daerah asal (contoh: Kopi Arabika Toraja, Tenun Sumba).</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-soft-50 border border-soft-200">
+                    <div class="w-10 h-10 rounded-lg bg-soft-200 flex items-center justify-center text-soft-700 mb-4"><i data-lucide="file-text" class="w-5 h-5"></i></div>
+                    <h3 class="font-bold text-lg text-soft-900 mb-2">Hak Cipta & Rahasia Dagang</h3>
+                    <p class="text-sm text-soft-700">Melindungi karya seni ukir, motif batik khas, maupun resep warisan kuliner tradisional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: KATALOG BUDAYA LELUHUR -->
+    <section id="katalog" class="py-20 bg-soft-100 border-b border-soft-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+                <div>
+                    <span class="text-xs font-cinzel-caps text-soft-600 font-bold">Katalog Warisan</span>
+                    <h2 class="text-3xl sm:text-4xl font-quiche-bold text-soft-950 mt-1">Pengetahuan Yang Tumbuh Dari Tanah & Tangan</h2>
+                </div>
+                <a href="#" class="text-sm font-semibold text-soft-700 hover:text-soft-900">Lihat Semua Katalog →</a>
+            </div>
+
+            <!-- Grid Items -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-soft-200 shadow-sm">
+                    <div class="h-48 bg-soft-300 relative flex items-center justify-center text-soft-600 font-medium">
+                        [Foto Batik Tulis Sogan]
+                        <span class="absolute top-3 right-3 px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Terlindungi HKI</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-soft-500 font-medium">Yogyakarta</span>
+                        <h3 class="font-bold text-lg text-soft-900 mt-1">Batik Tulis Sogan Giriloyo</h3>
+                        <p class="text-xs text-soft-600 mt-2 line-clamp-2">Lahir dari tradisi pembatik di lereng bukit Giriloyo dengan pewarna alami mahoni.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-soft-200 shadow-sm">
+                    <div class="h-48 bg-soft-300 relative flex items-center justify-center text-soft-600 font-medium">
+                        [Foto Kopi Arabika Toraja]
+                        <span class="absolute top-3 right-3 px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">Indikasi Geografis</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-soft-500 font-medium">Sulawesi Selatan</span>
+                        <h3 class="font-bold text-lg text-soft-900 mt-1">Kopi Arabika Toraja</h3>
+                        <p class="text-xs text-soft-600 mt-2 line-clamp-2">Ditanam di ketinggian 1.500 mdpl dengan profil rasa rempah alami yang khas.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-soft-200 shadow-sm">
+                    <div class="h-48 bg-soft-300 relative flex items-center justify-center text-soft-600 font-medium">
+                        [Foto Tenun Ikat Sumba]
+                        <span class="absolute top-3 right-3 px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded-full">Proses Validasi</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-soft-500 font-medium">Nusa Tenggara Timur</span>
+                        <h3 class="font-bold text-lg text-soft-900 mt-1">Ten
